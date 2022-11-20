@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Czystość kodu</title>
+</head>
+<body>
+    <div class="page">
+        <header class="header">
+            <h1 class="header-title">Czystość kodu</h1>
+            <h2 class="header-subtitle">Ściąga/Prezentacja</h2>
+        </header>
+
+        <nav class="nav">
+            <a class="nav-link" href="#naming-variables">Nazwy zmiennych</a>
+            <a class="nav-link" href="#comments">Kommentarzy</a>
+            <a class="nav-link" href="#clean-code-general">Zasady o czystym kodzie</a>
+            <a class="nav-link" href="#document-comments">Komentarze dokumentacyjne</a>
+        </nav>
+
+        
+        <div class="container">
+            <main class="content">
+                <!-- <img class="image intro-img" src="img/divan.jpg" alt="unable to load image"> -->
+                <h3 class="content-title">Zasady</h3>
+                
+                <article class="article" id="naming-variables">
+                    <h4 class="article-title">
+                        <a href="#">Zasady tworzenia nazw zmiennych prostych i obiektow</a>
+                    </h4>
+                    <div class="article-text">
+                        <ul>
+                            <li>Nazwa zmiennej powinna być zrozumiała nawet dla ludzi z innego zespołu programistycznego.</li>
+                            <li>Nazwa zmiennej musi opisywać cel tworzenia obiektu.</li>
+                            <li>Nie oszczędzaj na długości nazwy, lepsza jest dłuższa i bardziej zrozumiała (nawet dla początkujących).</li>
+                            <li>Mniej skrótów, zwłaszcza jeśli są one nieznane poza projektem.
+                            </li>
+                            <li>Używaj tylko dobrze znanych skrótów (czy są oni w Wikipedii?).</li>
+                            <li>Nie skracaj słów.</li>
+                        </ul>
+                    </div>
+
+                </article>
+
+                <article class="article" id="comments">
+                    <h4 class="article-title">
+                        <a href="#">Tworzenie komentarzy</a>
+                    </h4>
+                    <div class="article-text">
+                        <p>Komentarze są bardzo ważne dla kodu. Ale trzeba pamiętać, że idealny kod to jest taki, który sam siebie komentuje.
+                        </p>
+                        <p><h4>Styl komentarzy.</h3>
+                            Korzystaj z '//' lub z '/**/', póki zachowuje się jednolitość.  
+                            <p>Możesz korzystać z '//' lub z '/**/', jednak '//' jest bardziej preferowane. Ale pamiętaj, żeby nie poruszać już ustalony w twoim kodzie styl komentarzy.</p>
+                            <p>W samym początku każdego pliku musisz dodawać komentarz z licenzją. Komentarze muszą opisywać zawartość pliku. Jeśli plik jest opisaniem lub testem dla abstrakcji, dla której już istnieją komentarze, nie musisz dodawać w początku pliku jeszcze jeden opis.</p>
+                            <h4>Komentarze klasy.</h4>
+                            <p>Każde tworzenie klasy musi być opisane z pomocą komentarze(tylko jeśli nie jest to klasa oczywista). Musisz dodać opisanie kiedy i gdzie korzystać z tej klasy. Także możesz dodać fragment kodu w komentarze dla przykładu korzystania z klasy.</p>
+                            <h4>Komentarze Funkcji.</h4>
+                            <p>Deklarowanie każdej funkcji musi zawierać przed sobą komentarz opisujący tą funkcję(dla czego służy ta funkcja i jakie argumenty zawiera).</p>
+                            <p>W komentarze dla deklarowaniej funkcji zwróć uwagę na:</p>
+                            <ul>
+                                <li>Co podaje się na wejście funkcji i co zwraca w końcu.</li>
+                                <li>Dla funckji-członka(metody) klasy: czy zachowuje egzemplarz referencji na argument, czy potrzebuje wyzwolenia pamięci.</li>
+                                <li>Czy może zawierać w sobie argumenty 'nullptr'.</li>
+                                <li>Złożoność algorytmiczna funckji.</li>
+                            </ul>
+                        </p>
+                    </div>
+
+                </article>
+
+                <article class="article" id="clean-code-general">
+                    <h4 class="article-title">
+                        <a href="#">Zasady o czystym kodzie</a>
+                    </h4>
+                    <div class="article-text">
+                        <h4>Formatowanie</h4>
+                        <p>Styl kodu i jego formatowanie są rzeczami swobodnymi, jednak łatwiej z nim pracować, kiedy jest on w ustalonym stylu(bądź to styl firmowy, lub zagalnie przyjęty).</p>
+                        <h4>Długość linii</h4>
+                        <p>Preferowaną jest dlugość linii 80 znaków. Duża ilość kodu jest pisana w takiej długości.</p>
+                        <p>Za: dlugość linii w 80 znaków to jest historyczny standart. Wraz z tym taką ilość znaków jest łatwiej umieścić w oknie i nie ma potrzeby zawsze zmieniać jego rozmiar. Więksość ludzi rozdzielają ekran na dwie części, gdzie taka długość linii jest bardzo wygodna.</p>
+                        <p>Przeciw: niektorzy mówią, że 80 znaków to jest przeżytak lat 1960-ych i że współczesne ekrany mogą wyświetlać o wiele więcej infromacji niż 80 znaków w linii.</p>
+
+                        <h4>Spacje przeciw tabulacji</h4>
+                        <p>Korzystaj tylko ze spacji dla odstępów.</p>
+
+                        <h4>Deklarowanie i implementacja funkcji.</h4>
+                        <p>Staraj się rozmieścić zwracany typ, nazwę, argumenty funkcji w jednej linii. Rozbij dość długą listę argumentów na linii.</p>
+
+                    </div>
+
+                </article>
+
+                <article class="article" id="document-comments">
+                    <h4 class="article-title">
+                        <a href="#">Komentarze dokumentacyjne</a>
+                    </h4>
+                    <div class="article-text">
+                        <p>Istnieje kilka sposobów oznaczenia bloku komentarza jako szczegółowego opisu:
+                            <ul>
+                                <li>Możesz użyć stylu Javadoc, który składa się z bloku komentarza w stylu C, zaczynającego się od dwóch *, na przykład:
+                                    <div class="code">
+                                        <p>/**</p>
+                                        <p>*...text...</p>
+                                        <p>*/</p>
+                                    </div>
+                                </li>
+                                <li>Możesz użyć Qt Styl i dodać wylrzyknik po otwarciu bloku w stylu C:
+                                    <div class="code">
+                                        <p>/*!</p>
+                                        <p>*...text...</p>
+                                        <p>*/</p>
+                                    </div>
+                                </li>
+                                <li>Trzeci sposób to użycie prynajmniej dwoch C++ linii komentarzy, gdzie każda linija zaczyna się od dodatniego slash'u:
+                                    <div class="code">
+                                        <p>///</p>
+                                        <p>///...text...</p>
+                                        <p>///</p>
+                                    </div>
+                                    <p>albo:</p>
+                                    <div class="code">
+                                        <p>//!</p>
+                                        <p>//!...text...</p>
+                                        <p>//!</p>
+                                    </div>
+                                    <p>Zwróć uwagę, że blok komentarzy kończy się pustą liniją.</p>
+                                </li>
+                                <li>Niektórzy ludzie lubią, aby ich bloki komentarzy były bardziej widoczne w dokumentacji. W tym celu możesz użyć następujące:
+                                    <div class="code">
+                                        <p>/********************************************//**</p>
+                                        <p>*  ... text</p>
+                                        <p>***********************************************/</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </p>
+                        <a class="source" href="https://doxygen.nl/manual/docblocks.html">Zródło</a>
+                    </div>
+
+                </article>
+
+            </main>
+
+            <aside class="sidebar">
+                <h3 class="sidebar-title">Wykonał</h3>
+                <!-- <img class="image" src="img/man4.png" alt=""> -->
+                <div class="sidebar-text">
+                    <p class="name">Mykyta Gusak    
+                    </p>
+                    <p class="author">Wydział Informatyki i Telekomunikacji Politechniki Krakowskiej    
+                    </p>
+                    <p class="author">Kierunek Informatyka    
+                    </p>
+                    <p class="author">GL03   
+                    </p>
+
+                    <a class="source" href="https://habr.com/ru/post/480422/">Zródło</a>
+                    
+                </div>
+            </aside>
+        </div>
+
+        <footer class="footer">
+            made by criz0fix
+        </footer>
+
+    </div>
+</body>
+</html>
